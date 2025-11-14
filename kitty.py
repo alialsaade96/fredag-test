@@ -1,33 +1,24 @@
-# Maven
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# kitty.py
 
-# STS
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+import os
 
-# IntelliJ IDEA
-.idea
-*.iws
-*.iml
-*.ipr
+# Define the path to check
+path = "target/"
 
-# NetBeans
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# Print a welcome message
+print("🐱 Hello from kitty.py!")
 
-# VS Code
-.vscode/
+# Check if the path exists
+if os.path.exists(path):
+    print(f"✅ The path '{path}' exists.")
+    
+    # List contents of the folder
+    files = os.listdir(path)
+    if files:
+        print("📂 Contents of the folder:")
+        for file in files:
+            print(f" - {file}")
+    else:
+        print("📁 The folder is empty.")
+else:
+    print(f"❌ The path '{path}' does not exist.")
