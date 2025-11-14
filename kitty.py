@@ -1,5 +1,3 @@
-HELP.md
-path = "target/"
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
