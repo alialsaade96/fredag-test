@@ -24,7 +24,7 @@ jobs:
         run: mvn -B clean --file pom.xml
 
       - name: Run kitty.py
-        run: python3 kitty.py   # <-- Added step to run your Python file
+        run: python3 kitty.py
 
   test:
     needs: build
@@ -35,3 +35,4 @@ jobs:
 
       - name: Run Maven tests
         run: mvn -B test
+
